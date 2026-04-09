@@ -106,23 +106,6 @@
       font-size:30px;
     }
 
-    /* TRUSTED ROW */
-    .trusted{
-      display:flex;
-      justify-content:center;
-      gap:40px;
-      flex-wrap:wrap;
-      margin-bottom:20px;
-      opacity:0.9;
-    }
-
-    .trusted img{
-      height:28px;
-      filter: brightness(0) invert(1);
-      opacity:0.7;
-    }
-
-    /* CARDS */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -137,14 +120,35 @@
 
     .muted{color:var(--muted);font-size:14px;}
 
-    /* MAP IMAGE */
-    .map{
-      width:100%;
-      border-radius:12px;
-      margin-top:12px;
+    /* ICON ROW */
+    .icons{
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      flex-wrap:wrap;
+      margin-top:10px;
+      opacity:0.8;
     }
 
-    /* CONTACT */
+    .icons img{
+      width:28px;
+      height:28px;
+    }
+
+    /* MAP PLACEHOLDER */
+    .map{
+      width:100%;
+      height:160px;
+      border-radius:12px;
+      margin-top:12px;
+      background:linear-gradient(135deg,#1b2a44,#0f172a);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:rgba(255,255,255,0.5);
+      font-size:13px;
+    }
+
     input,textarea{
       width:100%;
       padding:10px;
@@ -188,29 +192,27 @@
 <header>
   <div>
     <h1>Short-Term Let Management</h1>
-    <p>We manage Airbnb & Booking.com properties across Newark, Nottingham & Lincoln — fully hands-off for landlords.</p>
+    <p>Airbnb & Booking.com property management across Newark, Nottingham & Lincoln.</p>
     <a class="btn" href="#services">Explore</a>
     <a class="btn" href="#contact">Partner With Us</a>
   </div>
 </header>
 
-<!-- TRUSTED -->
-<section>
-  <h2>Trusted Platforms</h2>
-  <div class="trusted">
-    <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb">
-    <img src="https://logo.clearbit.com/booking.com" alt="Booking.com">
-    <img src="https://logo.clearbit.com/openrent.co.uk" alt="OpenRent">
-  </div>
-</section>
-
 <!-- SERVICES -->
 <section id="services">
   <h2>What We Do</h2>
+
   <div class="grid">
+
     <div class="card">
       <strong>Full Management</strong>
-      <p class="muted">Airbnb, Booking.com & guest communication handled end-to-end.</p>
+      <p class="muted">Guest messaging, pricing, bookings & operations handled end-to-end.</p>
+
+      <div class="icons">
+        <img src="https://cdn.simpleicons.org/airbnb/ffffff" alt="Airbnb">
+        <img src="https://cdn.simpleicons.org/bookingdotcom/ffffff" alt="Booking.com">
+        <img src="https://cdn.simpleicons.org/openstreetmap/ffffff" alt="OpenRent (generic icon)">
+      </div>
     </div>
 
     <div class="card">
@@ -220,8 +222,9 @@
 
     <div class="card">
       <strong>Revenue Optimisation</strong>
-      <p class="muted">Dynamic pricing to increase occupancy and income.</p>
+      <p class="muted">Dynamic pricing to maximise occupancy and nightly rates.</p>
     </div>
+
   </div>
 </section>
 
@@ -234,19 +237,19 @@
     <div class="card">
       <strong>Newark-on-Trent</strong>
       <p class="muted">Head Office</p>
-      <img class="map" src="https://staticmap.openstreetmap.de/staticmap.php?center=53.074,0.808&zoom=12&size=600x300" />
+      <div class="map">Map Screenshot Placeholder</div>
     </div>
 
     <div class="card">
       <strong>Nottingham</strong>
-      <p class="muted">High demand short-lets</p>
-      <img class="map" src="https://staticmap.openstreetmap.de/staticmap.php?center=52.9548,-1.1581&zoom=11&size=600x300" />
+      <p class="muted">High demand short lets</p>
+      <div class="map">Map Screenshot Placeholder</div>
     </div>
 
     <div class="card">
       <strong>Lincoln</strong>
       <p class="muted">Growing rental market</p>
-      <img class="map" src="https://staticmap.openstreetmap.de/staticmap.php?center=53.2307,-0.5406&zoom=11&size=600x300" />
+      <div class="map">Map Screenshot Placeholder</div>
     </div>
 
   </div>
@@ -266,6 +269,11 @@
 <footer>
   © 2026 DC Residential Group
 </footer>
+
+<a class="whatsapp" href="https://wa.me/447000000000">WhatsApp</a>
+
+</body>
+</html>
 
 <a class="whatsapp" href="https://wa.me/447000000000">WhatsApp</a>
 
