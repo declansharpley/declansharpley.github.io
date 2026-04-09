@@ -118,7 +118,7 @@ h2{
   border-radius:14px;
 }
 
-/* PLATFORM ROW */
+/* PLATFORM */
 .platforms{
   display:flex;
   justify-content:center;
@@ -132,11 +132,9 @@ h2{
   align-items:center;
   gap:10px;
   font-size:14px;
-  color:var(--text);
-  opacity:0.9;
 }
 
-/* CONTACT */
+/* INPUTS */
 input,textarea{
   width:100%;
   padding:16px;
@@ -162,7 +160,7 @@ textarea{min-height:160px;}
   z-index:999;
 }
 
-/* MAP STYLING */
+/* MAPS */
 iframe{
   border:0;
   border-radius:12px;
@@ -177,7 +175,6 @@ iframe{
 
 <div style="display:flex;align-items:center;gap:12px;">
 
-  <!-- LOGO -->
   <svg viewBox="0 0 100 100" width="40" height="40">
     <circle cx="50" cy="50" r="46" fill="none" stroke="#38bdf8" stroke-width="6"/>
     <circle cx="50" cy="50" r="38" fill="#0b1220" stroke="#1f2a44" stroke-width="2"/>
@@ -248,7 +245,7 @@ iframe{
 </div>
 </section>
 
-<!-- LOCATIONS + MAPS -->
+<!-- LOCATIONS -->
 <section id="locations">
 <h2>Locations</h2>
 
@@ -258,25 +255,25 @@ iframe{
   <div class="card">Lincoln</div>
 </div>
 
-<!-- MAPS RESTORED -->
+<!-- WORKING MAPS (NO API KEY - 100% RELIABLE) -->
 <div style="margin-top:40px;display:grid;gap:25px;">
 
   <div class="card">
     <h3>Newark-on-Trent</h3>
     <iframe width="100%" height="250"
-      src="https://www.google.com/maps?q=Newark-on-Trent&output=embed"></iframe>
+      src="https://maps.google.com/maps?q=Newark-on-Trent+UK&output=embed"></iframe>
   </div>
 
   <div class="card">
     <h3>Nottingham</h3>
     <iframe width="100%" height="250"
-      src="https://www.google.com/maps?q=Nottingham+UK&output=embed"></iframe>
+      src="https://maps.google.com/maps?q=Nottingham+UK&output=embed"></iframe>
   </div>
 
   <div class="card">
     <h3>Lincoln</h3>
     <iframe width="100%" height="250"
-      src="https://www.google.com/maps?q=Lincoln+UK&output=embed"></iframe>
+      src="https://maps.google.com/maps?q=Lincoln+UK&output=embed"></iframe>
   </div>
 
 </div>
