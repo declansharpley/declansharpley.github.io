@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DC Residential Group | Short-Term Rentals</title>
+  <title>DC Residential Group | Short-Term Let Management</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -29,7 +29,6 @@
       line-height: 1.6;
     }
 
-    /* NAV */
     nav {
       display: flex;
       justify-content: space-between;
@@ -57,7 +56,6 @@
       color: var(--accent);
     }
 
-    /* HERO */
     header {
       height: 95vh;
       background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
@@ -89,14 +87,14 @@
     }
 
     header p {
-      max-width: 750px;
+      max-width: 800px;
       margin-top: 15px;
       font-size: 18px;
       color: var(--muted);
     }
 
     .btn {
-      margin-top: 25px;
+      margin-top: 18px;
       padding: 14px 28px;
       background: var(--accent);
       color: #000;
@@ -152,10 +150,6 @@
       padding: 18px;
     }
 
-    .card h3 {
-      margin-bottom: 8px;
-    }
-
     .muted {
       color: var(--muted);
       font-size: 14px;
@@ -197,13 +191,6 @@
       border-radius: 8px;
       border: none;
     }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 13px;
-      opacity: 0.7;
-    }
   </style>
 </head>
 <body>
@@ -212,19 +199,23 @@
   <div class="logo">DC RESIDENTIAL GROUP</div>
   <div>
     <a href="#services">Services</a>
-    <a href="#stats">Results</a>
+    <a href="#locations">Locations</a>
+    <a href="#how">How It Works</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header>
-  <h1>Premium Short-Term Rental Management</h1>
-  <p>DC Residential Group transforms properties across Lincoln & Nottingham into high-performing serviced accommodation assets, delivering hands-off income for landlords.</p>
+  <h1>Short-Term Let Management for Landlords</h1>
+  <p>DC Residential Group partners with landlords in Newark-on-Trent, Nottingham, and Lincoln to manage properties through Airbnb, Booking.com and OpenRent — delivering hassle-free, professional short-let income.</p>
+
+  <a class="btn" href="#services">View Services</a>
+  <a class="btn" href="#locations">Locations</a>
   <a class="btn" href="#contact">Partner With Us</a>
 </header>
 
 <section>
-  <h2>Trusted Platforms</h2>
+  <h2>Platforms We Use</h2>
   <div class="logos">
     <div>Airbnb</div>
     <div>Booking.com</div>
@@ -233,65 +224,95 @@
 </section>
 
 <section id="services">
-  <h2>What We Do</h2>
+  <h2>What We Do For Landlords</h2>
   <div class="grid">
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" />
       <div class="card-content">
-        <h3>Guaranteed Rent Structures</h3>
-        <p class="muted">Predictable monthly income through structured agreements.</p>
+        <h3>Short-Let Management</h3>
+        <p class="muted">We manage your property on Airbnb, Booking.com and OpenRent to maximise occupancy and income.</p>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
       <div class="card-content">
-        <h3>Full Management</h3>
-        <p class="muted">We handle pricing, bookings, guests, and operations end-to-end.</p>
+        <h3>Local Property Care</h3>
+        <p class="muted">We are locally based in Newark-on-Trent and manage properties across Newark, Nottingham, and Lincoln with regular cleaning and inspections.</p>
       </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" />
       <div class="card-content">
-        <h3>Hotel-Grade Cleaning</h3>
-        <p class="muted">Professional cleaning and maintenance standards across all properties.</p>
+        <h3>Hands-Off Income</h3>
+        <p class="muted">We handle guests, pricing, messaging, check-ins and turnovers so you don’t have to.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="locations">
+  <h2>Our Property Locations</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-content">
+        <h3>Newark-on-Trent</h3>
+        <p class="muted">Our home base where we provide full hands-on management and rapid response support.</p>
       </div>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" />
       <div class="card-content">
-        <h3>Protection & Insurance</h3>
-        <p class="muted">Robust safeguards for property and landlord peace of mind.</p>
+        <h3>Nottingham</h3>
+        <p class="muted">We manage multiple short-term let properties across Nottingham city and surrounding areas.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>Lincoln</h3>
+        <p class="muted">We support landlords in Lincoln with full Airbnb, Booking.com and OpenRent management.</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<section id="stats">
-  <h2>Performance Overview</h2>
-  <div class="stats">
-    <div class="stat">
-      <h3>£1,800 → £3,200</h3>
-      <p class="muted">Average monthly uplift per property</p>
+<section id="how">
+  <h2>How It Works</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-content">
+        <h3>1. We Assess Your Property</h3>
+        <p class="muted">We review your property in Newark, Nottingham or Lincoln and estimate earning potential.</p>
+      </div>
     </div>
-    <div class="stat">
-      <h3>90%+</h3>
-      <p class="muted">Average occupancy rate</p>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>2. We Set It Up</h3>
+        <p class="muted">We list your property across Airbnb, Booking.com and OpenRent with professional optimisation.</p>
+      </div>
     </div>
-    <div class="stat">
-      <h3>24/7</h3>
-      <p class="muted">Guest support coverage</p>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>3. We Fully Manage It</h3>
+        <p class="muted">We handle guests, cleaning, pricing and maintenance — you receive passive income.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
-<section class="cta" id="contact">
-  <h2>Partner With Us</h2>
-  <p class="muted">Led by Chelsey & Declan, DC Residential Group helps landlords unlock higher-performing rental income in Lincoln & Nottingham.</p>
+<section id="contact" class="cta">
+  <h2>Partner With DC Residential Group</h2>
+  <p class="muted">Founded by Chelsey & Declan, we help landlords across Newark-on-Trent, Nottingham, and Lincoln turn properties into high-performing short-term lets with full local management.</p>
 
   <form>
     <input type="text" placeholder="Name" />
@@ -299,12 +320,10 @@
     <textarea rows="4" placeholder="Tell us about your property"></textarea>
     <button class="btn" type="submit">Send Enquiry</button>
   </form>
-
-  <p style="margin-top:20px;"><strong>Email:</strong> your@email.com</p>
 </section>
 
 <footer>
-  © 2026 DC Residential Group. Founded by Chelsey & Declan.
+  © 2026 DC Residential Group | Chelsey & Declan
 </footer>
 
 </body>
