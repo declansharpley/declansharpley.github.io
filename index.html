@@ -120,19 +120,20 @@
 
     .muted{color:var(--muted);font-size:14px;}
 
-    /* ICON ROW */
+    /* TRUST ICONS */
     .icons{
       display:flex;
       justify-content:center;
-      gap:30px;
-      flex-wrap:wrap;
-      margin-top:10px;
-      opacity:0.8;
+      gap:25px;
+      margin-top:15px;
+      opacity:0.85;
     }
 
-    .icons img{
+    .icons svg{
       width:28px;
       height:28px;
+      fill:white;
+      opacity:0.8;
     }
 
     /* MAP PLACEHOLDER */
@@ -174,7 +175,6 @@
       text-decoration:none;
       font-weight:600;
     }
-
   </style>
 </head>
 
@@ -198,21 +198,37 @@
   </div>
 </header>
 
+<!-- TRUSTED PLATFORMS -->
+<section>
+  <h2>Trusted Platforms</h2>
+  <div class="icons">
+
+    <!-- Airbnb -->
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 10a3 3 0 110-6 3 3 0 010 6z"/>
+    </svg>
+
+    <!-- Booking -->
+    <svg viewBox="0 0 24 24">
+      <path d="M7 3h6a4 4 0 010 8H7V3zm0 8h7a4 4 0 010 8H7v-8z"/>
+    </svg>
+
+    <!-- OpenRent -->
+    <svg viewBox="0 0 24 24">
+      <path d="M12 3l9 8h-3v10h-5v-6H11v6H6V11H3l9-8z"/>
+    </svg>
+
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
   <h2>What We Do</h2>
 
   <div class="grid">
-
     <div class="card">
       <strong>Full Management</strong>
-      <p class="muted">Guest messaging, pricing, bookings & operations handled end-to-end.</p>
-
-      <div class="icons">
-        <img src="https://cdn.simpleicons.org/airbnb/ffffff" alt="Airbnb">
-        <img src="https://cdn.simpleicons.org/bookingdotcom/ffffff" alt="Booking.com">
-        <img src="https://cdn.simpleicons.org/openstreetmap/ffffff" alt="OpenRent (generic icon)">
-      </div>
+      <p class="muted">We handle bookings, guests, pricing & operations end-to-end.</p>
     </div>
 
     <div class="card">
@@ -222,9 +238,8 @@
 
     <div class="card">
       <strong>Revenue Optimisation</strong>
-      <p class="muted">Dynamic pricing to maximise occupancy and nightly rates.</p>
+      <p class="muted">Dynamic pricing to increase occupancy and income.</p>
     </div>
-
   </div>
 </section>
 
@@ -269,11 +284,6 @@
 <footer>
   © 2026 DC Residential Group
 </footer>
-
-<a class="whatsapp" href="https://wa.me/447000000000">WhatsApp</a>
-
-</body>
-</html>
 
 <a class="whatsapp" href="https://wa.me/447000000000">WhatsApp</a>
 
