@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>DC Residential Group | Short-Term Let Management Newark Nottingham Lincoln</title>
-
-  <meta name="description" content="DC Residential Group manages short-term rental properties across Newark-on-Trent, Nottingham and Lincoln." />
+  <title>DC Residential Group | Short-Term Let Management</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -19,209 +17,257 @@
       --muted:rgba(234,240,255,0.7);
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;scroll-behavior:smooth;}
-
-    body{background:var(--bg);color:var(--text);line-height:1.6;}
-
-    nav{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:18px 40px;position:fixed;width:100%;top:0;z-index:999;
-      background:rgba(11,18,32,0.85);backdrop-filter:blur(10px);
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Inter,sans-serif;
+      scroll-behavior:smooth;
     }
 
-    nav a{color:var(--text);text-decoration:none;margin-left:18px;font-size:14px;opacity:0.85;}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-    .logo img{height:38px;}
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 40px;
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      background:rgba(11,18,32,0.85);
+      backdrop-filter:blur(10px);
+    }
+
+    nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin-left:18px;
+      font-size:14px;
+      opacity:0.8;
+    }
+
+    nav a:hover{color:var(--accent);}
 
     header{
       height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:20px;
       background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover;
-      display:flex;align-items:center;justify-content:center;text-align:center;
-      position:relative;padding:20px;
+      position:relative;
     }
 
     header::after{
-      content:'';position:absolute;inset:0;background:rgba(0,0,0,0.65);
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.65);
     }
 
-    header div{position:relative;z-index:2;max-width:900px;}
+    header div{
+      position:relative;
+      z-index:2;
+      max-width:850px;
+    }
 
-    h1{font-size:52px;}
+    h1{font-size:54px;}
 
     p{color:var(--muted);margin-top:12px;}
 
     .btn{
-      margin-top:18px;display:inline-block;
-      padding:12px 24px;background:var(--accent);
-      color:#000;border-radius:10px;font-weight:600;
-      text-decoration:none;margin-right:10px;
+      margin-top:18px;
+      display:inline-block;
+      padding:12px 22px;
+      background:var(--accent);
+      color:#000;
+      border-radius:10px;
+      font-weight:600;
+      text-decoration:none;
+      margin-right:10px;
     }
 
-    section{padding:90px 20px;max-width:1100px;margin:auto;opacity:0;transform:translateY(30px);transition:all .8s ease;}
-    section.show{opacity:1;transform:translateY(0);}
+    section{
+      padding:80px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
 
-    h2{text-align:center;margin-bottom:40px;font-size:32px;}
+    h2{
+      text-align:center;
+      margin-bottom:35px;
+      font-size:30px;
+    }
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+    /* TRUSTED ROW */
+    .trusted{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      flex-wrap:wrap;
+      margin-bottom:20px;
+      opacity:0.9;
+    }
 
-    .card{background:var(--card);padding:20px;border-radius:14px;}
+    .trusted img{
+      height:28px;
+      filter: brightness(0) invert(1);
+      opacity:0.7;
+    }
+
+    /* CARDS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:22px;
+      border-radius:14px;
+    }
 
     .muted{color:var(--muted);font-size:14px;}
 
-    /* logos */
-    .logos{
-      display:flex;
-      gap:14px;
-      margin-top:12px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-
-    .logos img{
-      height:26px;
-      filter: brightness(0) invert(1);
-      opacity:0.8;
-    }
-
-    /* maps */
+    /* MAP IMAGE */
     .map{
       width:100%;
       border-radius:12px;
       margin-top:12px;
     }
 
-    .testimonial{display:none;}
-    .testimonial.active{display:block;}
-
+    /* CONTACT */
     input,textarea{
-      width:100%;padding:10px;margin-top:10px;
-      border-radius:8px;border:none;
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+      border-radius:8px;
+      border:none;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      opacity:0.7;
     }
 
     .whatsapp{
-      position:fixed;bottom:20px;right:20px;
-      background:#25D366;color:#fff;padding:14px 18px;
-      border-radius:50px;text-decoration:none;font-weight:600;
-      z-index:999;
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
     }
+
   </style>
 </head>
 
 <body>
 
 <nav>
-  <div class="logo"><img src="logo.png" alt="DC Residential Group"></div>
+  <div><strong>DC Residential Group</strong></div>
   <div>
     <a href="#services">Services</a>
     <a href="#locations">Locations</a>
-    <a href="#calculator">Income</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header>
   <div>
-    <h1>DC Residential Group</h1>
-    <p>Short-term let management across Newark, Nottingham & Lincoln.</p>
-    <a class="btn" href="#services">Explore Services</a>
+    <h1>Short-Term Let Management</h1>
+    <p>We manage Airbnb & Booking.com properties across Newark, Nottingham & Lincoln — fully hands-off for landlords.</p>
+    <a class="btn" href="#services">Explore</a>
     <a class="btn" href="#contact">Partner With Us</a>
   </div>
 </header>
+
+<!-- TRUSTED -->
+<section>
+  <h2>Trusted Platforms</h2>
+  <div class="trusted">
+    <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb">
+    <img src="https://logo.clearbit.com/booking.com" alt="Booking.com">
+    <img src="https://logo.clearbit.com/openrent.co.uk" alt="OpenRent">
+  </div>
+</section>
 
 <!-- SERVICES -->
 <section id="services">
   <h2>What We Do</h2>
   <div class="grid">
-
     <div class="card">
-      Full Airbnb & Booking.com Management
-
-      <div class="logos">
-        <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb">
-        <img src="https://logo.clearbit.com/booking.com" alt="Booking.com">
-        <img src="https://logo.clearbit.com/openrent.co.uk" alt="OpenRent">
-      </div>
+      <strong>Full Management</strong>
+      <p class="muted">Airbnb, Booking.com & guest communication handled end-to-end.</p>
     </div>
 
     <div class="card">
-      Local Cleaning & Maintenance (Newark-based)
+      <strong>Local Operations</strong>
+      <p class="muted">Cleaning, maintenance & guest support based in Newark.</p>
     </div>
 
     <div class="card">
-      Optimised Pricing & Occupancy Growth
+      <strong>Revenue Optimisation</strong>
+      <p class="muted">Dynamic pricing to increase occupancy and income.</p>
     </div>
-
   </div>
 </section>
 
 <!-- LOCATIONS -->
 <section id="locations">
-  <h2>Locations We Operate In</h2>
+  <h2>Locations We Cover</h2>
 
   <div class="grid">
 
     <div class="card">
-      <strong>Newark-on-Trent (HQ)</strong>
-      <img class="map"
-        src="https://staticmap.openstreetmap.de/staticmap.php?center=53.074,0.808&zoom=12&size=600x300"
-        alt="Newark map">
+      <strong>Newark-on-Trent</strong>
+      <p class="muted">Head Office</p>
+      <img class="map" src="https://staticmap.openstreetmap.de/staticmap.php?center=53.074,0.808&zoom=12&size=600x300" />
     </div>
 
     <div class="card">
       <strong>Nottingham</strong>
-      <img class="map"
-        src="https://staticmap.openstreetmap.de/staticmap.php?center=52.9548,-1.1581&zoom=11&size=600x300"
-        alt="Nottingham map">
+      <p class="muted">High demand short-lets</p>
+      <img class="map" src="https://staticmap.openstreetmap.de/staticmap.php?center=52.9548,-1.1581&zoom=11&size=600x300" />
     </div>
 
     <div class="card">
       <strong>Lincoln</strong>
-      <img class="map"
-        src="https://staticmap.openstreetmap.de/staticmap.php?center=53.2307,-0.5406&zoom=11&size=600x300"
-        alt="Lincoln map">
+      <p class="muted">Growing rental market</p>
+      <img class="map" src="https://staticmap.openstreetmap.de/staticmap.php?center=53.2307,-0.5406&zoom=11&size=600x300" />
     </div>
 
-  </div>
-</section>
-
-<!-- CALCULATOR -->
-<section id="calculator">
-  <h2>Before / After Income Estimate</h2>
-  <div class="card" style="text-align:center;">
-    <input id="rent" type="number" placeholder="e.g. 1200" />
-    <button class="btn" onclick="calc()">Calculate</button>
-    <p id="result"></p>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2>Partner With Us</h2>
+
   <input placeholder="Name" />
   <input placeholder="Email" />
   <textarea placeholder="Tell us about your property"></textarea>
+
   <button class="btn">Send Enquiry</button>
 </section>
 
-<footer style="text-align:center;padding:30px;opacity:0.7;">
+<footer>
   © 2026 DC Residential Group
 </footer>
 
-<a class="whatsapp" href="https://wa.me/447000000000">WhatsApp Us</a>
-
-<script>
-const sections=document.querySelectorAll('section');
-const obs=new IntersectionObserver(e=>{
-  e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show');});
-});
-sections.forEach(s=>obs.observe(s));
-
-function calc(){
-  let rent=document.getElementById('rent').value;
-  document.getElementById('result').innerText =
-    "Estimated short-let income: £" + (rent*2.2);
-}
-</script>
+<a class="whatsapp" href="https://wa.me/447000000000">WhatsApp</a>
 
 </body>
 </html>
