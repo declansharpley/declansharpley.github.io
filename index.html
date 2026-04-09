@@ -1,192 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>DC Residential Group | Short-Term Let Management</title>
+<title>DC Residential Group</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111b2e;
-      --accent:#38bdf8;
-      --text:#eaf0ff;
-      --muted:rgba(234,240,255,0.7);
-    }
+<style>
+:root{
+  --bg:#0b1220;
+  --card:#111b2e;
+  --accent:#38bdf8;
+  --text:#eaf0ff;
+  --muted:rgba(234,240,255,0.7);
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Inter,sans-serif;
-      scroll-behavior:smooth;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter,sans-serif;
+}
 
-    body{
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
 
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 40px;
-      position:fixed;
-      width:100%;
-      top:0;
-      z-index:999;
-      background:rgba(11,18,32,0.85);
-      backdrop-filter:blur(10px);
-    }
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 40px;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(11,18,32,0.85);
+  backdrop-filter:blur(10px);
+  z-index:999;
+}
 
-    nav a{
-      color:var(--text);
-      text-decoration:none;
-      margin-left:18px;
-      font-size:14px;
-      opacity:0.8;
-    }
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
 
-    nav a:hover{color:var(--accent);}
+.logo svg{
+  width:34px;
+  height:34px;
+}
 
-    header{
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:20px;
-      background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover;
-      position:relative;
-    }
+.logo span{
+  font-weight:700;
+  letter-spacing:0.5px;
+}
 
-    header::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.65);
-    }
+/* LINKS */
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+  opacity:0.8;
+}
 
-    header div{
-      position:relative;
-      z-index:2;
-      max-width:850px;
-    }
+nav a:hover{color:var(--accent);}
 
-    h1{font-size:54px;}
+/* HERO */
+header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover;
+  position:relative;
+}
 
-    p{color:var(--muted);margin-top:12px;}
+header::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
 
-    .btn{
-      margin-top:18px;
-      display:inline-block;
-      padding:12px 22px;
-      background:var(--accent);
-      color:#000;
-      border-radius:10px;
-      font-weight:600;
-      text-decoration:none;
-      margin-right:10px;
-    }
+.hero{
+  position:relative;
+  z-index:2;
+  max-width:850px;
+}
 
-    section{
-      padding:80px 20px;
-      max-width:1100px;
-      margin:auto;
-    }
+h1{font-size:54px;}
 
-    h2{
-      text-align:center;
-      margin-bottom:35px;
-      font-size:30px;
-    }
+p{color:var(--muted);margin-top:12px;}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-    }
+.btn{
+  margin-top:18px;
+  display:inline-block;
+  padding:12px 22px;
+  background:var(--accent);
+  color:#000;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  margin-right:10px;
+}
 
-    .card{
-      background:var(--card);
-      padding:22px;
-      border-radius:14px;
-    }
+/* SECTIONS */
+section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    .muted{color:var(--muted);font-size:14px;}
+h2{
+  text-align:center;
+  margin-bottom:35px;
+}
 
-    /* MAP FIX (IMPORTANT) */
-    .map{
-      width:100%;
-      height:220px;
-      border-radius:12px;
-      overflow:hidden;
-      margin-top:12px;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
 
-    iframe{
-      width:100%;
-      height:100%;
-      border:0;
-    }
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:14px;
+}
 
-    /* ICONS */
-    .icons{
-      display:flex;
-      justify-content:center;
-      gap:25px;
-      margin-top:15px;
-      opacity:0.85;
-    }
+/* TRUST LOGOS */
+.trust{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
 
-    .icons svg{
-      width:28px;
-      height:28px;
-      fill:white;
-      opacity:0.8;
-    }
+.brand{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  opacity:0.9;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      opacity:0.7;
-    }
+.brand svg{
+  width:36px;
+  height:36px;
+}
 
-    .whatsapp{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:#fff;
-      padding:14px 18px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:600;
-    }
+/* MAP */
+.map{
+  width:100%;
+  height:220px;
+  border-radius:12px;
+  overflow:hidden;
+  margin-top:10px;
+}
 
-    .value-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-    }
+iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
 
-    .highlight{
-      border-left:3px solid var(--accent);
-      padding-left:10px;
-    }
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.7;
+}
 
-  </style>
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div><strong>DC Residential Group</strong></div>
+  <div class="logo">
+
+    <!-- DC LOGO -->
+    <svg viewBox="0 0 100 100" fill="none">
+      <rect width="100" height="100" rx="20" fill="#38bdf8"/>
+      <path d="M30 70V30h18c12 0 22 8 22 20s-10 20-22 20H30zm18-10c7 0 12-4 12-10s-5-10-12-10h-6v20h6z" fill="#0b1220"/>
+    </svg>
+
+    <span>DC Residential Group</span>
+  </div>
+
   <div>
     <a href="#services">Services</a>
     <a href="#value">Why Us</a>
@@ -195,12 +208,17 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <header>
-  <div>
+  <div class="hero">
     <h1>Short-Term Let Management</h1>
-    <p>Airbnb & Booking.com property management across Newark, Nottingham & Lincoln.</p>
+
+    <p>
+      Airbnb, Booking.com & OpenRent property management across Newark, Nottingham & Lincoln.
+    </p>
+
     <a class="btn" href="#services">Explore</a>
-    <a class="btn" href="#contact">Partner With Us</a>
+    <a class="btn" href="#contact">Get Started</a>
   </div>
 </header>
 
@@ -208,10 +226,34 @@
 <section>
   <h2>Trusted Platforms</h2>
 
-  <div class="icons">
-    <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 10a3 3 0 110-6 3 3 0 010 6z"/></svg>
-    <svg viewBox="0 0 24 24"><path d="M7 3h6a4 4 0 010 8H7V3zm0 8h7a4 4 0 010 8H7v-8z"/></svg>
-    <svg viewBox="0 0 24 24"><path d="M12 3l9 8h-3v10h-5v-6H11v6H6V11H3l9-8z"/></svg>
+  <div class="trust">
+
+    <!-- AIRBNB -->
+    <div class="brand">
+      <svg viewBox="0 0 24 24">
+        <path fill="#FF5A5F" d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/>
+      </svg>
+      <small>Airbnb</small>
+    </div>
+
+    <!-- BOOKING -->
+    <div class="brand">
+      <svg viewBox="0 0 24 24">
+        <rect width="24" height="24" rx="6" fill="#003580"/>
+        <text x="6" y="17" font-size="12" fill="white" font-weight="700">B</text>
+      </svg>
+      <small>Booking.com</small>
+    </div>
+
+    <!-- OPENRENT -->
+    <div class="brand">
+      <svg viewBox="0 0 24 24">
+        <rect width="24" height="24" rx="6" fill="#2ecc71"/>
+        <path d="M6 14l6-6 6 6v4H6v-4z" fill="white"/>
+      </svg>
+      <small>OpenRent</small>
+    </div>
+
   </div>
 </section>
 
@@ -222,52 +264,29 @@
   <div class="grid">
     <div class="card">
       <strong>Full Management</strong>
-      <p class="muted">We handle guests, pricing, bookings & operations end-to-end.</p>
+      <p>End-to-end Airbnb, Booking.com & OpenRent management.</p>
     </div>
 
     <div class="card">
-      <strong>Local Operations</strong>
-      <p class="muted">Cleaning, maintenance & guest support in your area.</p>
+      <strong>Operations</strong>
+      <p>Cleaning, guest support & maintenance handled locally.</p>
     </div>
 
     <div class="card">
-      <strong>Revenue Optimisation</strong>
-      <p class="muted">Dynamic pricing to maximise occupancy & income.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WHY SHORT LETS -->
-<section id="value">
-  <h2>Why Short Lets Beat Long Lets</h2>
-
-  <div class="value-grid">
-    <div class="card highlight">
-      <strong>Higher Income</strong>
-      <p class="muted">Short lets can generate significantly more monthly revenue than traditional renting.</p>
-    </div>
-
-    <div class="card highlight">
-      <strong>Flexibility</strong>
-      <p class="muted">Block dates for personal use whenever you want.</p>
-    </div>
-
-    <div class="card highlight">
-      <strong>Fully Managed</strong>
-      <p class="muted">We handle everything — you stay completely hands-off.</p>
+      <strong>Revenue Growth</strong>
+      <p>Dynamic pricing to maximise occupancy & income.</p>
     </div>
   </div>
 </section>
 
 <!-- LOCATIONS -->
 <section id="locations">
-  <h2>Locations We Cover</h2>
+  <h2>Locations</h2>
 
   <div class="grid">
 
     <div class="card">
       <strong>Newark-on-Trent</strong>
-      <p class="muted">Head Office</p>
       <div class="map">
         <iframe src="https://www.google.com/maps?q=Newark-on-Trent,UK&output=embed"></iframe>
       </div>
@@ -275,7 +294,6 @@
 
     <div class="card">
       <strong>Nottingham</strong>
-      <p class="muted">High demand short lets</p>
       <div class="map">
         <iframe src="https://www.google.com/maps?q=Nottingham,UK&output=embed"></iframe>
       </div>
@@ -283,7 +301,6 @@
 
     <div class="card">
       <strong>Lincoln</strong>
-      <p class="muted">Growing rental market</p>
       <div class="map">
         <iframe src="https://www.google.com/maps?q=Lincoln,UK&output=embed"></iframe>
       </div>
@@ -294,20 +311,18 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Partner With Us</h2>
+  <h2>Contact</h2>
 
   <input placeholder="Name" />
   <input placeholder="Email" />
-  <textarea placeholder="Tell us about your property"></textarea>
+  <textarea placeholder="Message"></textarea>
 
-  <button class="btn">Send Enquiry</button>
+  <button class="btn">Send</button>
 </section>
 
 <footer>
   © 2026 DC Residential Group
 </footer>
-
-<a class="whatsapp" href="https://wa.me/447000000000">WhatsApp</a>
 
 </body>
 </html>
