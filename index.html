@@ -3,328 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DC Residential Group | Short-Term Let Management</title>
+
+  <!-- SEO -->
+  <title>DC Residential Group | Short-Term Let Management Newark Nottingham Lincoln</title>
+  <meta name="description" content="DC Residential Group manages short-term rental properties across Newark-on-Trent, Nottingham and Lincoln. We operate on Airbnb, Booking.com and OpenRent providing full hands-off management for landlords." />
+  <meta name="keywords" content="short lets, Airbnb management, property management, Newark on Trent, Nottingham rentals, Lincoln property management, DC Residential Group" />
+  <meta property="og:title" content="DC Residential Group" />
+  <meta property="og:description" content="Hands-off short-term let management for landlords across Newark, Nottingham and Lincoln." />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #0b1220;
-      --card: #111b2e;
-      --accent: #38bdf8;
-      --text: #eaf0ff;
-      --muted: rgba(234,240,255,0.7);
+    :root{
+      --bg:#0b1220;
+      --card:#111b2e;
+      --accent:#38bdf8;
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,0.7);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;scroll-behavior:smooth;}
+
+    body{background:var(--bg);color:var(--text);line-height:1.6;}
+
+    /* NAV */
+    nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:18px 40px;position:fixed;width:100%;top:0;z-index:999;
+      background:rgba(11,18,32,0.85);backdrop-filter:blur(10px);
     }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+    nav a{color:var(--text);text-decoration:none;margin-left:18px;font-size:14px;opacity:0.85;}
+    nav a:hover{color:var(--accent);}
+
+    .logo img{height:38px;}
+
+    /* HERO */
+    header{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover;
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      position:relative;padding:20px;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: absolute;
-      width: 100%;
-      z-index: 10;
+    header::after{
+      content:'';position:absolute;inset:0;background:rgba(0,0,0,0.65);
     }
 
-    nav .logo {
-      font-weight: 700;
-      letter-spacing: 1px;
+    header div{position:relative;z-index:2;max-width:900px;}
+
+    h1{font-size:52px;}
+
+    p{color:var(--muted);margin-top:12px;}
+
+    .btn{
+      margin-top:18px;display:inline-block;
+      padding:12px 24px;background:var(--accent);
+      color:#000;border-radius:10px;font-weight:600;
+      text-decoration:none;margin-right:10px;
     }
 
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-      opacity: 0.8;
+    section{padding:90px 20px;max-width:1100px;margin:auto;opacity:0;transform:translateY(30px);transition:all .8s ease;}
+    section.show{opacity:1;transform:translateY(0);}
+
+    h2{text-align:center;margin-bottom:40px;font-size:32px;}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+
+    .card{background:var(--card);padding:20px;border-radius:14px;}
+
+    .muted{color:var(--muted);font-size:14px;}
+
+    /* TESTIMONIALS */
+    .testimonial{display:none;}
+    .testimonial.active{display:block;}
+
+    /* CALCULATOR */
+    .calc{
+      background:var(--card);
+      padding:25px;
+      border-radius:14px;
+      text-align:center;
     }
 
-    nav a:hover {
-      color: var(--accent);
+    input,textarea{
+      width:100%;padding:10px;margin-top:10px;
+      border-radius:8px;border:none;
     }
 
-    header {
-      height: 95vh;
-      background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      padding: 20px;
-    }
-
-    header::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.65);
-    }
-
-    header h1, header p, header .btn {
-      position: relative;
-      z-index: 2;
-    }
-
-    header h1 {
-      font-size: 54px;
-      font-weight: 700;
-      max-width: 900px;
-    }
-
-    header p {
-      max-width: 800px;
-      margin-top: 15px;
-      font-size: 18px;
-      color: var(--muted);
-    }
-
-    .btn {
-      margin-top: 18px;
-      padding: 14px 28px;
-      background: var(--accent);
-      color: #000;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 32px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 18px;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .logos {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
-
-    .stat {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 12px;
-    }
-
-    .cta {
-      text-align: center;
-      background: #0f1b33;
-      padding: 70px 20px;
-      border-radius: 14px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 12px;
-      border-radius: 8px;
-      border: none;
+    /* WHATSAPP BUTTON */
+    .whatsapp{
+      position:fixed;bottom:20px;right:20px;
+      background:#25D366;color:#fff;padding:14px 18px;
+      border-radius:50px;text-decoration:none;font-weight:600;
+      z-index:999;
     }
   </style>
 </head>
+
 <body>
 
 <nav>
-  <div class="logo">DC RESIDENTIAL GROUP</div>
+  <div class="logo"><img src="logo.png" alt="DC Residential Group"></div>
   <div>
     <a href="#services">Services</a>
     <a href="#locations">Locations</a>
-    <a href="#how">How It Works</a>
+    <a href="#calculator">Income</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header>
-  <h1>Short-Term Let Management for Landlords</h1>
-  <p>DC Residential Group partners with landlords in Newark-on-Trent, Nottingham, and Lincoln to manage properties through Airbnb, Booking.com and OpenRent — delivering hassle-free, professional short-let income.</p>
-
-  <a class="btn" href="#services">View Services</a>
-  <a class="btn" href="#locations">Locations</a>
-  <a class="btn" href="#contact">Partner With Us</a>
+  <div>
+    <h1>DC Residential Group</h1>
+    <p>Short-term let management for landlords across Newark-on-Trent, Nottingham & Lincoln. We manage your property on Airbnb, Booking.com and OpenRent while handling cleaning, guests and maintenance locally.</p>
+    <a class="btn" href="#services">Explore Services</a>
+    <a class="btn" href="#contact">Partner With Us</a>
+  </div>
 </header>
 
-<section>
-  <h2>Platforms We Use</h2>
-  <div class="logos">
-    <div>Airbnb</div>
-    <div>Booking.com</div>
-    <div>OpenRent</div>
-  </div>
-</section>
-
 <section id="services">
-  <h2>What We Do For Landlords</h2>
+  <h2>What We Do</h2>
   <div class="grid">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" />
-      <div class="card-content">
-        <h3>Short-Let Management</h3>
-        <p class="muted">We manage your property on Airbnb, Booking.com and OpenRent to maximise occupancy and income.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
-      <div class="card-content">
-        <h3>Local Property Care</h3>
-        <p class="muted">We are locally based in Newark-on-Trent and manage properties across Newark, Nottingham, and Lincoln with regular cleaning and inspections.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" />
-      <div class="card-content">
-        <h3>Hands-Off Income</h3>
-        <p class="muted">We handle guests, pricing, messaging, check-ins and turnovers so you don’t have to.</p>
-      </div>
-    </div>
-
+    <div class="card">Full Airbnb & Booking.com Management</div>
+    <div class="card">Local Cleaning & Maintenance (Newark-based)</div>
+    <div class="card">Optimised Pricing & Occupancy Growth</div>
   </div>
 </section>
 
 <section id="locations">
-  <h2>Our Property Locations</h2>
+  <h2>Locations We Operate In</h2>
   <div class="grid">
-
-    <div class="card">
-      <div class="card-content">
-        <h3>Newark-on-Trent</h3>
-        <p class="muted">Our home base where we provide full hands-on management and rapid response support.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h3>Nottingham</h3>
-        <p class="muted">We manage multiple short-term let properties across Nottingham city and surrounding areas.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h3>Lincoln</h3>
-        <p class="muted">We support landlords in Lincoln with full Airbnb, Booking.com and OpenRent management.</p>
-      </div>
-    </div>
-
+    <div class="card">Newark-on-Trent (HQ)</div>
+    <div class="card">Nottingham Properties</div>
+    <div class="card">Lincoln Properties</div>
   </div>
 </section>
 
-<section id="how">
-  <h2>How It Works</h2>
-  <div class="grid">
-
-    <div class="card">
-      <div class="card-content">
-        <h3>1. We Assess Your Property</h3>
-        <p class="muted">We review your property in Newark, Nottingham or Lincoln and estimate earning potential.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h3>2. We Set It Up</h3>
-        <p class="muted">We list your property across Airbnb, Booking.com and OpenRent with professional optimisation.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h3>3. We Fully Manage It</h3>
-        <p class="muted">We handle guests, cleaning, pricing and maintenance — you receive passive income.</p>
-      </div>
-    </div>
-
+<section id="calculator">
+  <h2>Before / After Income Estimate</h2>
+  <div class="calc">
+    <p class="muted">Enter your current monthly rent:</p>
+    <input id="rent" type="number" placeholder="e.g. 1200" />
+    <button class="btn" onclick="calc()">Calculate</button>
+    <p id="result"></p>
   </div>
 </section>
 
-<section id="contact" class="cta">
-  <h2>Partner With DC Residential Group</h2>
-  <p class="muted">Founded by Chelsey & Declan, we help landlords across Newark-on-Trent, Nottingham, and Lincoln turn properties into high-performing short-term lets with full local management.</p>
-
-  <form>
-    <input type="text" placeholder="Name" />
-    <input type="email" placeholder="Email" />
-    <textarea rows="4" placeholder="Tell us about your property"></textarea>
-    <button class="btn" type="submit">Send Enquiry</button>
-  </form>
+<section id="testimonials">
+  <h2>What Landlords Say</h2>
+  <div class="card testimonial active">"My Nottingham property is now fully managed and earning significantly more."</div>
+  <div class="card testimonial">"Completely hands-off and great communication from the team."</div>
+  <div class="card testimonial">"Best decision I made switching to short lets."</div>
 </section>
 
-<footer>
+<section id="contact">
+  <h2>Partner With Us</h2>
+  <input placeholder="Name" />
+  <input placeholder="Email" />
+  <textarea placeholder="Tell us about your property"></textarea>
+  <button class="btn">Send Enquiry</button>
+</section>
+
+<footer style="text-align:center;padding:30px;opacity:0.7;">
   © 2026 DC Residential Group | Chelsey & Declan
 </footer>
+
+<a class="whatsapp" href="https://wa.me/447000000000" target="_blank">WhatsApp Us</a>
+
+<script>
+// scroll animation
+const sections=document.querySelectorAll('section');
+const obs=new IntersectionObserver(e=>{
+  e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('show');});
+});
+sections.forEach(s=>obs.observe(s));
+
+// calculator
+function calc(){
+  let rent=document.getElementById('rent').value;
+  let result=rent*2.2;
+  document.getElementById('result').innerText="Estimated short-let income: £"+result;
+}
+
+// testimonials slider
+let t=0;
+setInterval(()=>{
+  let items=document.querySelectorAll('.testimonial');
+  items[t].classList.remove('active');
+  t=(t+1)%items.length;
+  items[t].classList.add('active');
+},3000);
+</script>
 
 </body>
 </html>
